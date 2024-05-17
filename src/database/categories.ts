@@ -1,9 +1,4 @@
-interface ICategory {
-  id: number
-  url: string
-  title: string
-  bgCard: string
-}
+import { ICategory } from '@/dtos'
 
 export const dataCategory = <ICategory[]>[
   {

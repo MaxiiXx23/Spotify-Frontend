@@ -1,33 +1,33 @@
 'use client'
 
+import { ICategory } from '@/dtos'
 import Image from 'next/image'
+import Link, { LinkProps } from 'next/link'
 
-interface IProps {
-  titleCard: string
-  urlImage: string
-  bgCard: string
+interface IProps extends LinkProps {
+  data: ICategory
 }
 
-export function CardCategory({ titleCard, bgCard, urlImage }: IProps) {
+export function CardCategory({ data, ...rest }: IProps) {
   return (
-    <a href="#">
+    <Link {...rest}>
       <li
         className="relative h-52 w-52 rounded-lg"
         style={{
-          backgroundColor: bgCard,
+          backgroundColor: data.bgCard,
         }}
       >
         <div className="flex flex-col items-start  p-4">
-          <strong>{titleCard}</strong>
+          <strong>{data.title}</strong>
         </div>
         <Image
           className="absolute bottom-0 right-0"
-          src={urlImage}
+          src={data.url}
           width={100}
           height={100}
           alt="cover"
         />
       </li>
-    </a>
+    </Link>
   )
 }

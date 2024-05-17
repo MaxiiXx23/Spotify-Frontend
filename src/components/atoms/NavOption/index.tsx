@@ -1,11 +1,8 @@
 'use client'
 
-import {
-  useContext,
-  ComponentProps,
-  ForwardRefExoticComponent,
-  RefAttributes,
-} from 'react'
+import { useContext, ForwardRefExoticComponent, RefAttributes } from 'react'
+
+import Link, { LinkProps } from 'next/link'
 
 import { AuthContext } from '@/context/AuthContext'
 
@@ -23,7 +20,7 @@ const tailVar = tv({
   },
 })
 
-interface Iprops extends ComponentProps<'a'>, VariantProps<typeof tailVar> {
+interface Iprops extends LinkProps, VariantProps<typeof tailVar> {
   text: string
   icon: ForwardRefExoticComponent<
     Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
@@ -40,13 +37,13 @@ export function NavOption({ icon: Icon, text, variant, ...rest }: Iprops) {
     !isLogged && variant === 'save' ? styledNotLogged : styledLogged
 
   return (
-    <a className={styled} {...rest}>
+    <Link className={styled} {...rest}>
       <div className={tailVar({ variant })}>
         <Icon size={16} />
       </div>
       <strong className="text-zinc-400 group-hover:text-zinc-100">
         {text}
       </strong>
-    </a>
+    </Link>
   )
 }

@@ -1,4 +1,4 @@
-import { Link } from '@/components/atoms/Link'
+import { LinkNav } from '@/components/atoms/LinkNav'
 import { ActionDropdownProfile } from '@/components/molecules/ActionDropdownProfile'
 import { WrapperBtnsControll } from '@/components/molecules/WrapperBtnsControll'
 
@@ -8,10 +8,10 @@ export function HeaderLibrary() {
       <div className="flex w-2/4 items-center gap-5">
         <WrapperBtnsControll />
         <div className="flex items-center justify-center gap-4">
-          <Link href="#" text="Playlists" variant="primary" />
-          <Link href="#" text="Podcasts" variant="primary" />
-          <Link href="#" text="Artists" variant="primary" />
-          <Link href="#" text="Albums" variant="primary" />
+          <LinkNav href="#" text="Playlists" variant="primary" />
+          <LinkNav href="#" text="Podcasts" variant="primary" />
+          <LinkNav href="#" text="Artists" variant="primary" />
+          <LinkNav href="#" text="Albums" variant="primary" />
         </div>
       </div>
       <div className="flex w-1/3 items-center justify-end gap-6">

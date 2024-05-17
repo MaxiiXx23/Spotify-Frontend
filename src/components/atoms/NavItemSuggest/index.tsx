@@ -1,13 +1,13 @@
-import { ComponentProps } from 'react'
+import Link, { LinkProps } from 'next/link'
 
-interface Iprops extends ComponentProps<'a'> {
+interface Iprops extends LinkProps {
   text: string
 }
 
 export function NavItemSuggest({ text, ...rest }: Iprops) {
   return (
-    <a className="text-sm text-zinc-400 hover:text-zinc-100" {...rest}>
+    <Link className="text-sm text-zinc-400 hover:text-zinc-100" {...rest}>
       {text}
-    </a>
+    </Link>
   )
 }

@@ -1,6 +1,5 @@
-import { ComponentProps } from 'react'
-
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { tv, VariantProps } from 'tailwind-variants'
 import { ICardDaily } from '@/dtos'
@@ -17,13 +16,13 @@ const tailVar = tv({
   },
 })
 
-interface IProps extends ComponentProps<'a'>, VariantProps<typeof tailVar> {
+interface IProps extends VariantProps<typeof tailVar> {
   data: ICardDaily
 }
 
-export function CardAudio({ data, variant, ...rest }: IProps) {
+export function CardAudio({ data, variant }: IProps) {
   return (
-    <a className={tailVar({ variant })} {...rest}>
+    <Link className={tailVar({ variant })} href="#">
       <Image
         src={data.urlImage}
         alt={data.title}
@@ -38,6 +37,6 @@ export function CardAudio({ data, variant, ...rest }: IProps) {
           {data.description}
         </span>
       </div>
-    </a>
+    </Link>
   )
 }

@@ -11,13 +11,7 @@ export function BenefitsPremium({ data }: IProps) {
       <h1 className="text-5xl font-bold text-black">The power of Premium</h1>
       <ul className="grid grid-cols-4">
         {data.map((item) => (
-          <CardBenefitPremium
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            alt="Benefit Premium"
-            urlImage={item.urlImage}
-          />
+          <CardBenefitPremium key={item.id} data={item} />
         ))}
       </ul>
     </section>

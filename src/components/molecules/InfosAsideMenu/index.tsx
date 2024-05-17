@@ -1,21 +1,22 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function InfosAsideMenu() {
   return (
     <div className="grid grid-cols-1 gap-4">
       <div className="grid grid-cols-2 gap-4">
-        <a href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
+        <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
           Legal
-        </a>
-        <a href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
+        </Link>
+        <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
           Privacy Center
-        </a>
-        <a href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
+        </Link>
+        <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
           Privacy Policy
-        </a>
-        <a href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
+        </Link>
+        <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
           About Ads
-        </a>
+        </Link>
         <Image
           src="/private.svg"
           width={24}
@@ -24,9 +25,9 @@ export function InfosAsideMenu() {
           title="Private"
         />
       </div>
-      <a href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
+      <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-100">
         Cookies
-      </a>
+      </Link>
     </div>
   )
 }

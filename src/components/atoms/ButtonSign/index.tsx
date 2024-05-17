@@ -7,7 +7,7 @@ const tailVar = tv({
   variants: {
     variant: {
       primary: 'bg-white text-zinc-950 hover:bg-zinc-100',
-      secundary: 'bg-transparent text-zinc-400',
+      secundary: 'bg-transparent text-zinc-400 hover:text-zinc-200',
       secundaryRounded:
         'bg-transparent text-zinc-400 border border-zinc-400 hover:bg-zinc-50',
       whiteTransparent:

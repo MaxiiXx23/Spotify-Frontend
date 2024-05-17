@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { ButtonSign } from '@/components/atoms/ButtonSign'
 import { IPlan } from '@/dtos'
 import { Bagde } from '@/components/atoms/Bagde'
@@ -44,9 +46,9 @@ export function CardPlan({ data }: IProps) {
         </div>
       </div>
       <div className="h-20 pt-4">
-        <a href="#" className="text-zinc-600 underline">
+        <Link href="#" className="text-zinc-600 underline">
           Terms and conditions apply.
-        </a>
+        </Link>
         {data.isPay && <Terms />}
       </div>
     </li>

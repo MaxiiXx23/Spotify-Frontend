@@ -14,12 +14,7 @@ export default function Search() {
           <Header />
           <ContainerLists title="Browse all" variant="search" isLibrary={false}>
             {dataCategory.map((item) => (
-              <CardCategory
-                key={item.id}
-                urlImage={item.url}
-                titleCard={item.title}
-                bgCard={item.bgCard}
-              />
+              <CardCategory key={item.id} data={item} href="#" />
             ))}
           </ContainerLists>
         </div>

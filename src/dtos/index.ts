@@ -27,3 +27,10 @@ export interface IPlan {
   checkList: string[]
   isPay: boolean
 }
+
+export interface ICategory {
+  id: number
+  url: string
+  title: string
+  bgCard: string
+}

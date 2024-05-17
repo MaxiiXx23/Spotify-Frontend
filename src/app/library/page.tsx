@@ -14,7 +14,7 @@ export default function Library() {
           <HeaderLibrary />
           <ContainerLists title="Playlists" variant="library" isLibrary>
             {playlists.map((item) => (
-              <CardAudio key={item.id} data={item} href="#" variant="primary" />
+              <CardAudio key={item.id} data={item} variant="primary" />
             ))}
           </ContainerLists>
         </section>

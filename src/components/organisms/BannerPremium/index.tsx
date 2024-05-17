@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { ButtonSign } from '@/components/atoms/ButtonSign'
 
 export function BannerPremium() {
@@ -15,9 +17,9 @@ export function BannerPremium() {
         </div>
       </div>
       <p>
-        <a href="#" className="underline">
+        <Link href="#" className="underline">
           Terms and conditions apply.
-        </a>{' '}
+        </Link>{' '}
         1 month free not available for users who have already tried Premium.
       </p>
     </section>

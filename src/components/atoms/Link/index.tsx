@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import Link, { LinkProps } from 'next/link'
 
 import { tv, VariantProps } from 'tailwind-variants'
 
@@ -11,14 +11,14 @@ const tailVar = tv({
   },
 })
 
-interface IProps extends ComponentProps<'a'>, VariantProps<typeof tailVar> {
+interface IProps extends LinkProps, VariantProps<typeof tailVar> {
   text: string
 }
 
-export function Link({ text, variant, ...rest }: IProps) {
+export function LinkNav({ text, variant, ...rest }: IProps) {
   return (
-    <a className={tailVar({ variant })} {...rest}>
+    <Link className={tailVar({ variant })} {...rest}>
       {text}
-    </a>
+    </Link>
   )
 }

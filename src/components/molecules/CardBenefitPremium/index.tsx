@@ -1,25 +1,29 @@
+import { ICardBenefit } from '@/dtos'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface IProps {
-  urlImage: string
-  title: string
-  description: string
-  alt: string
+  data: ICardBenefit
 }
 
-export function CardBenefitPremium({
-  urlImage,
-  title,
-  alt,
-  description,
-}: IProps) {
+export function CardBenefitPremium({ data }: IProps) {
   return (
-    <li className="flex h-72 w-72 flex-col items-center justify-center gap-10">
-      <Image src={urlImage} width={142} height={142} alt={alt} title={title} />
-      <div className="flex flex-col items-center gap-3">
-        <strong className="text-sm text-black">{title}</strong>
-        <span className="text-center text-base text-black">{description}</span>
-      </div>
-    </li>
+    <Link href="#">
+      <li className="flex h-72 w-72 flex-col items-center justify-center gap-10">
+        <Image
+          src={data.urlImage}
+          width={142}
+          height={142}
+          alt={data.title}
+          title={data.title}
+        />
+        <div className="flex flex-col items-center gap-3">
+          <strong className="text-sm text-black">{data.title}</strong>
+          <span className="text-center text-base text-black">
+            {data.description}
+          </span>
+        </div>
+      </li>
+    </Link>
   )
 }
