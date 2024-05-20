@@ -34,3 +34,27 @@ export interface ICategory {
   title: string
   bgCard: string
 }
+
+export interface IRowMusicPlaylist {
+  id: number
+  urlImage: string
+  title: string
+  totalPlays: number
+  album: string
+  author: string
+  time: string
+  linkAlbum: string
+  position: number
+}
+
+export interface IPlaylist {
+  data: {
+    id: number
+    title: string
+    urlImage: string
+    description: string
+    totalLikes: number
+    totalEntries: number
+  }
+  audios: IRowMusicPlaylist[]
+}

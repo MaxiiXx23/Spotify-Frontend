@@ -1,4 +1,4 @@
-import { LinkNav } from '@/components/atoms/LinkNav'
+import { LinkNav } from '@/components/atoms/Link'
 import { ActionDropdownProfile } from '@/components/molecules/ActionDropdownProfile'
 import { WrapperBtnsControll } from '@/components/molecules/WrapperBtnsControll'
 

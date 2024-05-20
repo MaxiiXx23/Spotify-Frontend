@@ -9,6 +9,7 @@ const tailVar = tv({
   variants: {
     variant: {
       green: 'ml-auto mr-6 bg-green-400 invisible group-hover:visible',
+      greenVisible: 'bg-green-400',
       white: 'bg-white hover:bg-white/90',
     },
   },

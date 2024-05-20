@@ -1,0 +1,58 @@
+import { IPlaylist } from '@/dtos'
+
+export const playlistJazz: IPlaylist = {
+  data: {
+    id: 1,
+    title: 'Jazz Vibes',
+    description: 'The original chill instrumental beats playlist.',
+    urlImage: '/PlaylistJazz.png',
+    totalLikes: 1760432,
+    totalEntries: 2,
+  },
+  audios: [
+    {
+      id: 1,
+      title: 'Jazz Music 01',
+      album: 'Jazz Nemo',
+      urlImage: '/PlaylistJazz.png',
+      linkAlbum: '#',
+      position: 1,
+      totalPlays: 2370,
+      author: 'Nemo',
+      time: '02:37',
+    },
+    {
+      id: 2,
+      title: 'Jazz Music 02',
+      album: 'Jazz Nemo',
+      urlImage: '/PlaylistJazz.png',
+      linkAlbum: '#',
+      position: 2,
+      totalPlays: 2348,
+      author: 'Nemo',
+      time: '03:40',
+    },
+    {
+      id: 3,
+      title: 'Jazz Music 03',
+      album: 'Jazz Nemo',
+      urlImage: '/PlaylistJazz.png',
+      linkAlbum: '#',
+      position: 3,
+      totalPlays: 1298,
+      author: 'Nemo',
+      time: '04:12',
+    },
+    {
+      id: 4,
+      title: 'Jazz Music 04',
+      album: 'Jazz Nemo',
+      urlImage: '/PlaylistJazz.png',
+      linkAlbum: '#',
+      position: 4,
+      totalPlays: 1110,
+      author: 'Nemo',
+      time: '04:54',
+    },
+  ],
+}
