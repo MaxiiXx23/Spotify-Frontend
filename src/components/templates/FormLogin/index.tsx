@@ -5,12 +5,20 @@ import { InputPassword } from '@/components/atoms/InputPassword'
 export function FormLogin() {
   return (
     <form className="flex flex-col items-start justify-center gap-4 border-b border-b-zinc-300 pb-5">
-      <InputNormal
+      <InputNormal.ContainerLabelInput
         label="Email address or username"
-        type="text"
-        placeholder="Email address or username"
-      />
-      <InputPassword label="Password" placeholder="Password" />
+        variant="primary"
+      >
+        <InputNormal.Input
+          type="text"
+          placeholder="Email address or username"
+          variant="primary"
+        />
+      </InputNormal.ContainerLabelInput>
+
+      <InputPassword.Container label="Password" variant="primary">
+        <InputPassword.Input placeholder="Password" variant="primary" />
+      </InputPassword.Container>
       <a href="#" className="text-base text-black underline">
         Forgot your password?
       </a>

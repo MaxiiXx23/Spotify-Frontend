@@ -12,6 +12,7 @@ const tailVar = tv({
       secondary: 'bg-white  text-black',
       facebook: 'bg-blue-500 text-white hover:bg-blue-400',
       white: 'bg-white border border-zinc-400 text-zinc-500 hover:bg-zinc-50',
+      outline: 'bg-transparent border-zinc-700 text-white hover:border-white',
     },
   },
 })

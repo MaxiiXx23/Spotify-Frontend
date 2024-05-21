@@ -1,3 +1,7 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 import { ButtonIcon } from '@/components/atoms/ButtonIcon'
 import { ButtonSign } from '@/components/atoms/ButtonSign'
 import { FormLogin } from '@/components/templates/FormLogin'
@@ -5,6 +9,12 @@ import { FormLogin } from '@/components/templates/FormLogin'
 import { CustomIcon } from '@/components/atoms/CustomsIcon'
 
 export function SeactionFormLogin() {
+  const navigation = useRouter()
+
+  function handleNavigateSignUp() {
+    navigation.push('/signup')
+  }
+
   return (
     <section className="flex flex-col items-center justify-center gap-8 py-10">
       <div className="flex flex-col items-center justify-center gap-2">
@@ -36,7 +46,11 @@ export function SeactionFormLogin() {
         <strong className="text-base text-black">
           {`Don't have an account?`}
         </strong>
-        <ButtonSign text="Sign up for Spotify" variant="secundaryRounded" />
+        <ButtonSign
+          text="Sign up for Spotify"
+          variant="secundaryRounded"
+          onClick={handleNavigateSignUp}
+        />
       </div>
     </section>
   )

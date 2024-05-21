@@ -8,7 +8,7 @@ import { FooterMain } from '@/components/organisms/FooterMain'
 export default function Premium() {
   return (
     <main className="flex h-screen flex-col overflow-y-auto">
-      <HeaderAd />
+      <HeaderAd variant="primary" />
       <BannerPremium />
       <BenefitsPremium data={benefitsPremium} />
       <InfoPlans />

@@ -1,7 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export function HeaderAd() {
+import { VariantProps, tv } from 'tailwind-variants'
+
+const talVars = tv({
+  base: 'w-[480px] items-center gap-6',
+  variants: {
+    variant: {
+      primary: 'flex',
+      secundary: 'hidden',
+    },
+  },
+})
+
+interface IProps extends VariantProps<typeof talVars> {}
+
+export function HeaderAd({ variant }: IProps) {
   return (
     <header className="flex w-full items-center justify-between bg-zinc-950 px-6 py-2">
       <Link href="/">
@@ -12,7 +26,7 @@ export function HeaderAd() {
           alt="icon-spotify"
         />
       </Link>
-      <nav className="flex w-[480px] items-center gap-6">
+      <nav className={talVars({ variant })}>
         <div className="flex items-center gap-8">
           <Link href="/premium" className="text-white hover:text-white/80">
             Premium
