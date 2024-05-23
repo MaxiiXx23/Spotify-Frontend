@@ -7,12 +7,17 @@ import { playlists } from '@/database/playlists'
 
 export default function Library() {
   return (
-    <main className="flex h-screen flex-col">
-      <div className="flex flex-1">
+    <main className="flex h-screen w-full flex-col">
+      <div className="flex flex-1 overflow-y-auto md:overflow-hidden">
         <AsideMenu />
         <section className="flex flex-1 flex-col">
           <HeaderLibrary />
-          <ContainerLists title="Playlists" variant="library" isLibrary>
+          <ContainerLists
+            title="Playlists"
+            variant="library"
+            isLibrary
+            showTitle
+          >
             {playlists.map((item) => (
               <CardAudio key={item.id} data={item} variant="primary" />
             ))}

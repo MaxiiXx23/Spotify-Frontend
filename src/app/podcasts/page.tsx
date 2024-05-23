@@ -3,6 +3,7 @@ import { Header } from '@/components/organisms/Header'
 import { AsideMenu } from '@/components/organisms/AsideMenu'
 import { ListDaily } from '@/components/organisms/ListDaily'
 import { podcastsBests, podcastsBestsByAuthor } from '@/database/podcasts'
+import { ContainerLists } from '@/components/templates/ContainerLists'
 
 export default function Podcasts() {
   return (
@@ -11,14 +12,20 @@ export default function Podcasts() {
         <AsideMenu />
         <div className="flex flex-1 flex-col">
           <Header />
-          <section className="no-scrollbar flex max-h-[480px] flex-col items-start gap-5 overflow-y-auto p-6">
-            <strong className="text-lg text-white">
-              {`Best Episodes - Editor's Picks`}
-            </strong>
-            <ListDaily data={podcastsBests} />
-            <strong className="text-lg text-white">Best of: Brown Bag</strong>
-            <ListDaily data={podcastsBestsByAuthor} />
-          </section>
+          <ContainerLists title="" variant="outline">
+            <ListDaily
+              title={`Best Episodes - Editor's Picks`}
+              data={podcastsBests}
+            />
+            <ListDaily
+              title="Best of: Brown Bag"
+              data={podcastsBestsByAuthor}
+            />
+            <ListDaily
+              title="Best of: Brown Bag"
+              data={podcastsBestsByAuthor}
+            />
+          </ContainerLists>
         </div>
       </div>
       <FooterSignUp />

@@ -21,7 +21,7 @@ export function CardArtist({ data }: IProps) {
               height={320}
               alt="Artist"
               title={data.title}
-              className="h-full w-full overflow-hidden rounded-full"
+              className="h-44 w-44 overflow-hidden rounded-full"
             />
           </div>
           <div className="absolute -right-4 bottom-0 z-50">

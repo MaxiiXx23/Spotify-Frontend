@@ -16,7 +16,7 @@ export function SeactionFormLogin() {
   }
 
   return (
-    <section className="flex flex-col items-center justify-center gap-8 py-10">
+    <section className="flex flex-col items-center justify-center gap-8 pb-2 pt-4 md:py-10">
       <div className="flex flex-col items-center justify-center gap-2">
         <ButtonIcon
           icon={CustomIcon.FacebookIcon}

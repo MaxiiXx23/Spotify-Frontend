@@ -15,7 +15,7 @@ interface IProps extends Omit<IPlaylist, 'data'> {}
 
 export function TablePlaylist({ audios }: IProps) {
   return (
-    <ScrollArea className="max-h-[220px] w-full">
+    <ScrollArea className="max-h-[360px] w-full sm:max-h-[420px] md:max-h-[520px] lg:max-h-[620px] xl:max-h-[200px]">
       <Table className="h-full">
         <TableHeader>
           <TableRow className="border-b-zinc-400 bg-zinc-800 hover:bg-transparent">

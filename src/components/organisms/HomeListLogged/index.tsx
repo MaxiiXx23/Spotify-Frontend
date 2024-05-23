@@ -15,7 +15,7 @@ export function HomeListLogged() {
       </ul>
       <ListAudios TitleList="Made for you">
         {madeForMe.map((item) => (
-          <CardAudio key={item.id} data={item} href="#" variant="secundary" />
+          <CardAudio key={item.id} data={item} variant="secundary" />
         ))}
       </ListAudios>
     </section>

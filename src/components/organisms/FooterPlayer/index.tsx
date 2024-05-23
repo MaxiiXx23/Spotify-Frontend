@@ -5,7 +5,7 @@ import { PlayControll } from '@/components/molecules/PlayControll'
 
 export function FooterPlayer() {
   return (
-    <footer className="flex items-center justify-between gap-4 border-t border-zinc-700 bg-zinc-800 p-6">
+    <footer className="flex w-full items-center justify-between border-t border-zinc-700 bg-zinc-800 p-2 md:p-4 lg:p-6">
       <AudioInfoPlay
         urlImage="/Michael_Jackson_Thriller.jpg"
         alt="Music Thriller"

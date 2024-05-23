@@ -5,7 +5,7 @@ interface IProps extends Omit<IPlaylist, 'audios'> {}
 
 export function HeaderInfoPlayList({ data }: IProps) {
   return (
-    <header className="gap- flex h-52 w-full items-center justify-center gap-4 pb-4">
+    <header className="flex w-full flex-col items-center justify-center gap-4 py-4 md:h-52 md:flex-row md:pb-4">
       <div className="flex h-full items-end justify-center">
         <Image
           src={data.urlImage}
@@ -19,10 +19,12 @@ export function HeaderInfoPlayList({ data }: IProps) {
       <div className="flex h-full w-full flex-col items-start justify-start">
         <span className="text-sm">Playlist</span>
         <div className="flex h-full flex-col items-start justify-end gap-4">
-          <h1 className="text-8xl font-bold text-white">{data.title}</h1>
+          <h1 className="text-4xl font-bold text-white sm:text-7xl lg:text-8xl">
+            {data.title}
+          </h1>
           <div className="flex flex-col items-start gap-2">
             <span className="text-sm text-zinc-400">{data.description}</span>
-            <div className=" gap- flex w-full items-start justify-start">
+            <div className=" flex w-full items-start justify-start gap-2">
               <div className="flex items-center gap-2">
                 <Image
                   src="/SpotifyIcon.svg.png"

@@ -4,30 +4,37 @@ import { ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const tailVar = tv({
-  base: ['no-scrollbar mb-2 grid max-h-96 gap-6 overflow-y-auto'],
+  base: [
+    'no-scrollbar w-full mb-2 grid gap-6 overflow-y-auto lg:max-h-[360px]',
+  ],
   variants: {
     variant: {
-      search: 'grid-cols-4',
-      library: 'grid-cols-6',
+      search:
+        'grid-cols-1 justify-items-center xl:grid-cols-4 sm:grid-cols-3 mobileL:grid-cols-2 sm:justify-between',
+      library:
+        'grid-cols-1 justify-items-center xl:grid-cols-6 sm:grid-cols-3 mobileL:grid-cols-2 sm:justify-between',
+      outline: '',
     },
   },
 })
 
 interface IProps extends VariantProps<typeof tailVar> {
-  title: string
+  showTitle?: boolean
+  title?: string
   children: ReactNode
-  isLibrary: boolean
+  isLibrary?: boolean
 }
 
 export function ContainerLists({
-  title,
-  isLibrary,
+  showTitle = false,
+  title = '',
+  isLibrary = false,
   variant,
   children,
 }: IProps) {
   return (
-    <section className="mt-6 flex flex-1 flex-col items-start gap-5 pl-6 pr-6 pt-6">
-      <strong className="text-lg text-white">{title}</strong>
+    <section className="mt-6 flex flex-1 flex-col items-start gap-5 px-1 pt-6 sm:px-1 md:px-2 lg:px-6">
+      {showTitle && <strong className="text-lg text-white">{title}</strong>}
       <ul className={tailVar({ variant })}>
         {isLibrary && <CardLiked />}
         {children}

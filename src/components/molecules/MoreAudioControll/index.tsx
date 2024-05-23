@@ -3,7 +3,7 @@ import { Laptop2, LayoutList, Maximize2, Mic2 } from 'lucide-react'
 
 export function MoreAudioControll() {
   return (
-    <div className="flex w-full items-center justify-end gap-2">
+    <div className="hidden w-full items-center justify-between gap-2 sm:flex sm:justify-end">
       <Mic2 size={20} />
       <LayoutList size={20} />
       <Laptop2 size={20} />

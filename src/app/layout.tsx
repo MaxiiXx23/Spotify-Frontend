@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
 import './globals.css'
 import { AuthProvider } from '@/context/AuthContext'
+import { MenuProvider } from '@/context/MenuContext'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-zinc-800 text-zinc-50">
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <MenuProvider>{children}</MenuProvider>
+        </AuthProvider>
       </body>
     </html>
   )

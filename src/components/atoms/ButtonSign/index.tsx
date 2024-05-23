@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const tailVar = tv({
-  base: ['w-full rounded-full py-3 px-8'],
+  base: ['w-full py-2 px-1 rounded-full sm:py-3 px-8'],
   variants: {
     variant: {
       primary: 'bg-white text-zinc-950 hover:bg-zinc-100',

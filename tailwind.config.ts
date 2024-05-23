@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        mobileS: '320px',
+        mobileM: '375px',
+        mobileL: '425px',
+        tabletS: '600px',
+      },
       colors: {
         'Fuchsia-850': '#AF2896',
         'Cyan-550': '#509BF5',

@@ -19,7 +19,9 @@ export function ListAudios({ TitleList, children }: IProps) {
           Show all
         </a>
       </header>
-      <ul className="mb-6 grid grid-cols-5">{children}</ul>
+      <ul className="mb-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {children}
+      </ul>
     </>
   )
 }
