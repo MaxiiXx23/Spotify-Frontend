@@ -4,9 +4,7 @@ import { ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const tailVar = tv({
-  base: [
-    'no-scrollbar w-full mb-2 grid gap-6 overflow-y-auto lg:max-h-[360px]',
-  ],
+  base: ['no-scrollbar w-full mb-2 grid gap-6 overflow-y-auto max-h-screen'],
   variants: {
     variant: {
       search:

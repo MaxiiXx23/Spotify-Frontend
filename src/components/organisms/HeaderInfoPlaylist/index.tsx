@@ -1,4 +1,5 @@
 import { IPlaylist } from '@/dtos'
+import { countLikes } from '@/utils/countLikes'
 import Image from 'next/image'
 
 interface IProps extends Omit<IPlaylist, 'audios'> {}
@@ -38,7 +39,7 @@ export function HeaderInfoPlayList({ data }: IProps) {
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1 w-1 rounded-full bg-white" />
-                <span>{`${data.totalLikes} likes`} </span>
+                <span>{`${countLikes(data.totalLikes)} likes`} </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1 w-1 rounded-full bg-white" />

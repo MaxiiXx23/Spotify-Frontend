@@ -6,9 +6,9 @@ import { madeForMe } from '@/database/madeForMe'
 
 export function HomeListLogged() {
   return (
-    <section className="no-scrollbar flex max-h-[480px] flex-1 flex-col overflow-y-auto p-6">
+    <section className="no-scrollbar flex max-h-screen flex-col overflow-y-auto p-6">
       <h1 className="mt-4 text-4xl font-semibold">Good Night</h1>
-      <ul className="mt-4 grid grid-cols-3 gap-4">
+      <ul className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-3">
         {lastsListen.map((item) => (
           <CardLastMusic key={item.id} data={item} href="#" />
         ))}

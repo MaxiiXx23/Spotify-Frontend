@@ -10,7 +10,7 @@ interface IProps extends ComponentProps<'a'> {
 export function CardLastMusic({ data, ...rest }: IProps) {
   return (
     <a
-      className="group flex items-center gap-4 overflow-hidden rounded bg-white/10 transition-colors hover:bg-white/20"
+      className="group flex flex-col items-center justify-center gap-4 overflow-hidden rounded bg-white/10 transition-colors hover:bg-white/20 lg:flex-row"
       {...rest}
     >
       <Image

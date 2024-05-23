@@ -8,7 +8,7 @@ export function ActionDropdownProfile() {
         alt="Image profile"
         className="h-7 w-7 rounded-full"
       />
-      <strong className="hidden md:block">Max J</strong>
+      <strong className="hidden lg:block">Max J</strong>
       <ChevronDown />
     </div>
   )

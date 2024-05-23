@@ -8,7 +8,8 @@ const tailVar = tv({
   base: ['w-12 h-12 flex items-center justify-center rounded-full  text-black'],
   variants: {
     variant: {
-      green: 'ml-auto mr-6 bg-green-400 invisible group-hover:visible',
+      green:
+        'hidden bg-green-400 invisible group-hover:visible lg:flex lg:ml-auto lg:mr-6',
       greenVisible: 'bg-green-400',
       white: 'bg-white hover:bg-white/90',
     },

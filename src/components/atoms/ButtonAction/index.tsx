@@ -1,3 +1,9 @@
+import {
+  Tooltip,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { TooltipContent } from '@radix-ui/react-tooltip'
 import { ElementType, forwardRef } from 'react'
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,18 +14,22 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const ButtonAction = forwardRef<HTMLButtonElement, IProps>(
   ({ label, icon: Icon, ...rest }, ref) => {
     return (
-      <div className="group relative flex flex-col items-center justify-center">
-        <span className="invisible absolute -top-12 w-48 rounded bg-zinc-900 py-1 text-center group-hover:visible">
-          {label}
-        </span>
-        <button
-          className="text-zinc-400 outline-none group-hover:text-white"
-          ref={ref}
-          {...rest}
-        >
-          <Icon size={32} />
-        </button>
-      </div>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              className="text-zinc-400 outline-none group-hover:text-white"
+              ref={ref}
+              {...rest}
+            >
+              <Icon size={32} />
+            </button>
+          </TooltipTrigger>
+          <TooltipContent className="rounded bg-zinc-900 px-2 py-1">
+            <p>{label}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     )
   },
 )
